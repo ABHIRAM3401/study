@@ -1,0 +1,2 @@
+commit 1:
+    started coding by using various parameters of imread()  

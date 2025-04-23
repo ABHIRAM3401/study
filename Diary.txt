@@ -1,0 +1,6 @@
+Day 1 : 23-04-2005
+    started learning about open cv in yt channel https://youtu.be/eDIj5LuIL4A?si=aqz3QyjUPCYaw_5z
+    https://chatgpt.com/c/68079c7e-78c0-8003-afdf-9eab3142d3fc this link only opens with my mail , for you guys i will give the shared link
+
+    made some manipulations in imread() function
+
