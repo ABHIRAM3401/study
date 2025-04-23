@@ -3,4 +3,8 @@ Day 1 : 23-04-2005
     https://chatgpt.com/c/68079c7e-78c0-8003-afdf-9eab3142d3fc this link only opens with my mail , for you guys i will give the shared link
 
     made some manipulations in imread() function
+    USE OF RESIZE:
+        First I got a problem , the window or frame size is too large , because of that i cannot visualize the entire image .
+        So i have changed the image size by using the "cv2.resize(img,(widht,height))" function , later that i have tried different sizes 
+        to visualize that image , its good to have that fucntion. As it is a square image of size 1024 , i have changed its size to 800
 

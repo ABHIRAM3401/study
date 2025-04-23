@@ -1,2 +1,4 @@
 commit 1:
-    started coding by using various parameters of imread()  
+    started coding by using various parameters of imread() 
+    commit 1.1:
+        tried resize function in opencv , look into Diary for the reason  
