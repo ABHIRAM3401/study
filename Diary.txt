@@ -5,6 +5,50 @@ Day 1 : 23-04-2005
     made some manipulations in imread() function
     USE OF RESIZE:
         First I got a problem , the window or frame size is too large , because of that i cannot visualize the entire image .
-        So i have changed the image size by using the "cv2.resize(img,(widht,height))" function , later that i have tried different sizes 
-        to visualize that image , its good to have that fucntion. As it is a square image of size 1024 , i have changed its size to 800
+        So i have changed the image size by using the "cv2.resize(img,(widht,height))" function , later i have tried different sizes 
+        to visualize that image . As it is a square image of size 1024 , i have changed its size to 800
 
+        CUSTOMIZED WINDOW CREATION:
+        my question to gpt : so the first paramter of imshow is not just a random name of the window ,we can create multile named windows and we can use those different windows based on our requirement
+        the ans by gpt: Exactly! 💡 You nailed it.
+
+        https://chatgpt.com/c/6808e059-2914-8003-89e8-50b674a92a88   https://chatgpt.com/share/6808e92b-9978-8003-ae9f-c85a1e6c3930
+
+        surprise , chat gpt has given me some other code for the above problem and that made me to dive deeper into naming windows and 
+        the actual purpose of the first paramter of imshow('window_name',flag) and different flags in cv2.namedWindow().
+
+            cv2.namedWindow('My Window', cv2.WINDOW_NORMAL)
+            cv2.resizeWindow('My Window', 800, 600)
+            cv2.imshow('My Window', img)
+
+        by using the cv2.namedWindow() fucntion we can create a customized window with the below features with the help of different flags
+        here we can create multiple windows of different flags based on our purpose.
+        Flag	            Description
+        cv2.WINDOW_NORMAL	Allows the user to resize the window.
+        cv2.WINDOW_AUTOSIZE	Default. Window size matches image size, and you cannot resize it.
+        cv2.WINDOW_FULLSCREEN	Displays window in fullscreen mode (depends on OS support).
+        cv2.WINDOW_FREERATIO	Allows resizing the image freely without keeping aspect ratio.
+        cv2.WINDOW_KEEPRATIO	Resizes image but keeps aspect ratio. Usually used with resizeWindow().
+        
+        we can adust the size of the window by using the cv2.resizeWindow('window_name',width,height)
+        THIS ALL STARTED BECAUSE OF A SIMPLE PROBLEM and that made to learn some intresting things.
+
+        LATER TRIED NORMAL AND KEEPRATIO FLAGS
+        if we just create a window and if we are not using it for displaying any image , then an empty window is displayed on the screen
+            cv2.imshow('actual',img)
+            cv2.waitKey(3000)
+            cv2.namedWindow('Normal window', cv2.WINDOW_NORMAL)
+            cv2.resizeWindow('Normal window', 800, 300)
+
+            cv2.namedWindow('Keepratio',cv2.WINDOW_KEEPRATIO)
+            cv2.resizeWindow('Keepratio',400,550)
+
+            cv2.imshow('Normal window', img)
+            cv2.waitKey(3000)
+            # cv2.imshow('keepratio', img)
+            # cv2.waitKey(0)
+            cv2.destroyAllWindows()
+
+            in this code , i have commented the code for imshow('keepratio') so the image doesn't dsplayed but as i have created the window , 
+            it displays an empty window on my screen ,
+            sorry to say this but , even if i use an image to show with that window an extra empty window is displaying , i need to check about that later
