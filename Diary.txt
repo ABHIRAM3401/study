@@ -52,3 +52,32 @@ Day 1 : 23-04-2005
             in this code , i have commented the code for imshow('keepratio') so the image doesn't dsplayed but as i have created the window , 
             it displays an empty window on my screen ,
             sorry to say this but , even if i use an image to show with that window an extra empty window is displaying , i need to check about that later
+Day 2 : 25-04-2025
+    https://chatgpt.com/c/680a6386-48d8-8003-a7e9-0f192bbfcb51
+    Video reading :
+        "cv2.VideoCapture" This is a class in OpenCV used to handle video streams — from a file, a webcam, or even a network stream.
+        OpenCV attempts to open the video file located at that path.
+        If successful, it creates a VideoCapture object which acts like a "video reader."
+        This object lets you read the video one frame at a time using .read().
+
+        what does videoCapture returns  i.e. what will be stored in the video variable?
+            video will store a cv2.VideoCapture object, which is basically a handler (or interface) that OpenCV uses to interact with the video.
+            print(type(video)) --> <class 'cv2.VideoCapture'>
+
+        ret, frame = video.read()    
+            ret is the return status — like saying "Did this operation succeed? 
+            frame is the actual data returned.
+
+        🔓 What does .release() do?
+            It releases the resources associated with the cv2.VideoCapture object.
+            This means:
+            If it's a video file, OpenCV closes the file.If it's a webcam or external camera, OpenCV releases the hardware (so other apps can use it).
+            Prevents memory leaks, resource locks, and weird behavior if you open multiple streams.
+
+        🧽 Why it's important:
+            If you don’t call .release():
+            Your program might keep the file open.
+            You might lock your webcam, and other apps (like Zoom) won't be able to use it.
+            Over time, it can lead to resource exhaustion if you're working with many video streams.
+        🧠 Think of it like:
+            If cv2.VideoCapture is you checking out a book, then release() is returning the book to the library once you’re done.

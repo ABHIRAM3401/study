@@ -4,3 +4,5 @@ commit 1:
         tried resize function in opencv , look into Diary for the reason  
     commit 1.2:
         used different flags of cv2.namedWindow() and tried cv2.resizeWindow() for some flags , detailed description in Diary
+    commit 1.3:
+        just asked chatgpt about the lines for opening video using openCV in read.py file . It is quite similar to reading imgaes .
