@@ -2,10 +2,26 @@
 import cv2
 img = cv2.imread(r"c:\Users\abhir\Downloads\e6dacfc4-3343-4cf8-82f5-8cf2e409e601_2.jpeg")
 # img = cv2.imread(r"C:\Users\abhir\Downloads\brownie cake.jpeg")
-# print(img.shape)
-# resized = cv2.resize(img, (800, 800)) #(widht, height)
+print(img.shape)
+resized = cv2.resize(img, (800, 800)) #(widht, height)
 # cv2.imshow('image',resized)
-# cv2.waitKey(5000)
+# b = cv2.waitKey(5000)
+# print(b)
+
+
+#  line 13 - 23 are added from chatgpt , link is in diary , day 3 27/4
+cv2.imshow('image', resized)
+key = cv2.waitKey(5000) & 0xFF
+
+if key == ord('q'):
+    print("You pressed q!")
+elif key == ord('s'):
+    print("You pressed s!")
+else:
+    print(f"You pressed key code: {key} , the actual key is {chr(key)}")  #chr() return the alphabet if we give the ascii value as input for that function .
+
+cv2.destroyAllWindows()
+
 # print(type(img))
 # print(img.shape)
 # print(img[0].shape)
@@ -27,16 +43,16 @@ img = cv2.imread(r"c:\Users\abhir\Downloads\e6dacfc4-3343-4cf8-82f5-8cf2e409e601
 # cv2.destroyAllWindows()
 
 
-vid_path = r"C:\Users\abhir\Pictures\Camera Roll\WIN_20250424_21_33_39_Pro.mp4"
-video = cv2.VideoCapture(vid_path)
-print(type(video))
-ret = True
-cv2.namedWindow('video window',cv2.WINDOW_FULLSCREEN)
-# cv2.resizeWindow('video window',800,500)
-while ret:
-    ret , frame = video.read()
-    if ret:
-        cv2.imshow('video window',frame)
-        cv2.waitKey(40)
-video.release()
-cv2.destroyAllWindows()
+# vid_path = r"C:\Users\abhir\Pictures\Camera Roll\WIN_20250424_21_33_39_Pro.mp4"
+# video = cv2.VideoCapture(vid_path)
+# print(type(video))
+# ret = True
+# cv2.namedWindow('video window',cv2.WINDOW_FULLSCREEN)
+# # cv2.resizeWindow('video window',800,500)
+# while ret:
+#     ret , frame = video.read()
+#     if ret:
+#         cv2.imshow('video window',frame)
+#         cv2.waitKey(40)
+# video.release()
+# cv2.destroyAllWindows()

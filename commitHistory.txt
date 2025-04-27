@@ -6,3 +6,5 @@ commit 1:
         used different flags of cv2.namedWindow() and tried cv2.resizeWindow() for some flags , detailed description in Diary
     commit 1.3:
         just asked chatgpt about the lines for opening video using openCV in read.py file . It is quite similar to reading imgaes .
+    commit 1.4:
+        came to know about waitKey() fucn, what if returns and  how we can close a window by pressing a key and its relation with ascii.

@@ -81,3 +81,31 @@ Day 2 : 25-04-2025
             Over time, it can lead to resource exhaustion if you're working with many video streams.
         🧠 Think of it like:
             If cv2.VideoCapture is you checking out a book, then release() is returning the book to the library once you’re done.
+
+Day 3 : 27-04-2025
+    https://chatgpt.com/c/680dfc81-9af0-8003-81cf-cf63b02b3166
+    Return value of waitKey():
+        "
+        cv2.imshow('image',resized)
+        b = cv2.waitKey(5000) 
+        print(b)
+        what will be the output of that and what does cv2.waitKey() returns
+        
+        "
+        If you press a key during those 5 seconds, cv2.waitKey(5000) will return the ASCII code of the key you pressed.
+        If no key is pressed during the 5 seconds, cv2.waitKey(5000) will return -1.
+
+        " and when press any key why the window is closing rather than waiting for 5 seconds"
+        Ah, great observation! Here's the catch:
+        In OpenCV, the behavior of cv2.waitKey() is a little subtle . cv2.waitKey(delay) waits up to delay milliseconds for a key press.
+        If you press a key before the delay finishes, cv2.waitKey() immediately returns, and the program continues — it doesn't continue waiting after a key is pressed.
+        ✅ If no key is pressed, it will wait full 5 seconds.
+        ✅ If any key is pressed, it stops waiting immediately.
+
+
+        " or we can select any particular key wiht 0xFF ord('q')what about this"
+        Exactly, you're thinking in the right direction! 🔥 Let’s explain it properly:
+        cv2.waitKey(0) waits forever for any key. & 0xFF ensures you get a clean 8-bit keycode.
+        ord('q') gives you the numeric code for 'q'. Then you can do things depending on which key the user pressed!
+
+        If you don't press anything during 5 seconds, cv2.waitKey(5000) returns -1 (after masking with & 0xFF, it becomes 255 — small technical detail I’ll explain below).
