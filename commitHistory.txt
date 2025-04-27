@@ -8,3 +8,5 @@ commit 1:
         just asked chatgpt about the lines for opening video using openCV in read.py file . It is quite similar to reading imgaes .
     commit 1.4:
         came to know about waitKey() fucn, what if returns and  how we can close a window by pressing a key and its relation with ascii.
+    commit 1.5:
+        webcam operations and using mobile cam as webcam .
