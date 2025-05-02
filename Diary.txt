@@ -125,3 +125,9 @@ Day 3 : 27-04-2025
 
                 Virtualization Layer: Software like DroidCam acts as a crucial intermediary. It captures the video stream from your phone's camera and then creates a virtual webcam device on your computer. This virtual device adheres to the standard webcam protocols and has its own drivers, allowing applications like your OpenCV script or meeting software to recognize and use it.
  
+
+Day 4 : 02-05-2025
+    COLOUR SPACES  https://chatgpt.com/c/6814c37b-fbe4-8003-aefc-dfe06011c0f3
+        cvtColor(img,cv2.COLOR_BGR2RGB)
+        the nature image looks cool after converting it from  bgr  to rgb
+        COLOR_BGR2RGB , 2HSV , 2GRAY are some of the common color spaces in opencv

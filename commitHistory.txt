@@ -10,3 +10,6 @@ commit 1:
         came to know about waitKey() fucn, what if returns and  how we can close a window by pressing a key and its relation with ascii.
     commit 1.5:
         webcam operations and using mobile cam as webcam .
+commit 2:
+    a bit recap of image resizing , introduced to image cropping 
+    started exploring about color spaces i.e. different color combinations
