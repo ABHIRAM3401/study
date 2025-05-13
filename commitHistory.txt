@@ -11,5 +11,8 @@ commit 1:
     commit 1.5:
         webcam operations and using mobile cam as webcam .
 commit 2:
+    created a new folder named "images"  
     a bit recap of image resizing , introduced to image cropping 
     started exploring about color spaces i.e. different color combinations
+    commit 2.1:
+        tried to reconstruct the actual color img from an gray scale but failed

@@ -131,3 +131,20 @@ Day 4 : 02-05-2025
         cvtColor(img,cv2.COLOR_BGR2RGB)
         the nature image looks cool after converting it from  bgr  to rgb
         COLOR_BGR2RGB , 2HSV , 2GRAY are some of the common color spaces in opencv
+DAY 5 : 13-05-2025
+        https://chatgpt.com/c/68231f2d-9c80-8003-9f1a-7257aa2f14c1
+        LONG TIME NO SEE 
+        yeah , my summer vacation has started and quite busy with marriages and now i have moved to hyd from my village to learn car driving 
+        
+        ignoring this gap lets get into the topic
+
+        I was just revising this cv2 repo and listened the color spaces topic again.
+        As i have an idea about how the color images turn into gray scale by multiplying the luminance weights , 
+        At this point of time an idea striked on my mind , in present days we are seeing the old black and white movies in color format but how they are doing that , are they reconstructing the actual color image from the single graysclae value ,
+        this made me to think on the topic conversion of gray scale to color 
+        I have done some experiment on converting the gray to color (line 30 in color_spaces.py)
+        just i have converted the image to rgb then gray and again back to rgb 
+        suprisingly i got the grayscale image at last in the rgb format
+        i.e. https://chatgpt.com/c/68231f2d-9c80-8003-9f1a-7257aa2f14c1
+
+        When you need to use grayscale images in contexts that require 3-channel input (e.g., some CNN models). (search for this in the chat)
