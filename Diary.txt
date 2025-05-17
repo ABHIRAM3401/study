@@ -148,3 +148,11 @@ DAY 5 : 13-05-2025
         i.e. https://chatgpt.com/c/68231f2d-9c80-8003-9f1a-7257aa2f14c1
 
         When you need to use grayscale images in contexts that require 3-channel input (e.g., some CNN models). (search for this in the chat)
+
+DAY 6 : 17-05-2025
+    BLURING https://chatgpt.com/c/68235b19-baf0-8003-a7ae-6916548ba5bb
+        here i have learned about the effect of different kernel sizes in bluring , and the border flags(which you can see in the chat ) of basic blur function cv2.blur(img , (k_size, k_size)) , and upon changing the k_size , the intensity of bluring changes .
+        here a doubt has raised in my mind , what if i blur the img which already blurred , and i didn't observed much changes between those 2 pics , then i asked gpt , but the ans from gpt felt unsatisfied for me , and after thinking for couple of minutes , i got an idea to print the pixel values of original , blur3 and blur33 images , then i came to know about actually what happened ,
+            when the original image is blured with 3,3 kerenl we got an image blur3 , in blur3 the neigbhouring pixels are nearer compared to that of original image , so when we blur the image again (i.e bluring blur3 again with 3,3 kernel ) we get blur33 , as the pixels are nearer  , the average value will be nearer , 
+            [ 98 102  97] [105 109 104] [108 111 107] (original , blur3 , blur33 )
+            look at these values , 105 and 108 are closer but 105 is a bit far from 98(the pixel of orignal image )
