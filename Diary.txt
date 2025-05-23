@@ -156,3 +156,24 @@ DAY 6 : 17-05-2025
             when the original image is blured with 3,3 kerenl we got an image blur3 , in blur3 the neigbhouring pixels are nearer compared to that of original image , so when we blur the image again (i.e bluring blur3 again with 3,3 kernel ) we get blur33 , as the pixels are nearer  , the average value will be nearer , 
             [ 98 102  97] [105 109 104] [108 111 107] (original , blur3 , blur33 )
             look at these values , 105 and 108 are closer but 105 is a bit far from 98(the pixel of orignal image )
+
+DAY 7 :23-05-2025
+    TYPES OF BLURING https://chatgpt.com/c/6830218a-ef18-8003-9e54-bb0c2b13b4da
+    share link https://chatgpt.com/share/68303a24-95b8-8003-bc28-91e33c6f851c
+    different types of bluring , mainly there will be 4 but in the video he taught me 3 types , they are 
+    classical blur cv2.blur(img,(k_size,k_size)), gaussian blur cv2.GaussinaBlur(img , (k_size,k_size),standard_deviation) ,
+    median blur cv2.medianBlur(img,k_size)
+
+    all these are used to blur an image but each have their own importance and application . the classical blur takes the average of all pixels 
+    in the kernel and the kernel weigts are equal to 1/(k^2) ,but in case of gaussian blur we give much importance to the nearer pixels compared
+    to pixels which are far from the center. so the weights in the kernel are different and thy are calculated by a formual . and we have the 
+    standard standard_deviation parameter in gaussian blur , read the gpt chat to get know about standard deviation usage in gaussian blur.
+    now come to one of the importatn bluring techinique , i.e. median bluring , here we dont have any weights in the kernel , we take the direct values from the image and sort the values in kernel and takes the middle one , that is we have calculated the median here .
+    
+    medain blur is used to reduce the salt-pepper nosie (salt -> white -> pixel value 255 , pepper -> black -> pixel value 0) , which is mostly 
+    observed in gray scales images , we may have either 0 or 255 as the  pixel value and that causes some noise in the image
+    
+    the median blur can also be used to reduce the noise in color image ([255,255,255] , [0,0,0] [b,g,r]) , but here we take each channel separately as a grayscale , then we compute the median for each channel and rearrange them as bgr or rgb again .
+
+    if we apply gaussian or classical blur for a salt-pepper image , then we can see "smear effect" which cause some disturbance in the image, 
+    because the values in salt pepper image as extreme values (0 or 255) , so when we are calculating the average those extreme values can chagne the value (see in chat for clear understanding .)

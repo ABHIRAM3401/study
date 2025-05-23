@@ -18,3 +18,5 @@ commit 2:
         tried to reconstruct the actual color img from an gray scale but failed
     commit 2.2:
         exploring the blur func ,tried different kernel sizes , and bluring and image which is already blurred . 
+    commit 2.3:
+        different types of bluring , salt-pepper noise , smear effect
