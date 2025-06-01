@@ -177,3 +177,28 @@ DAY 7 :23-05-2025
 
     if we apply gaussian or classical blur for a salt-pepper image , then we can see "smear effect" which cause some disturbance in the image, 
     because the values in salt pepper image as extreme values (0 or 255) , so when we are calculating the average those extreme values can chagne the value (see in chat for clear understanding .)
+
+DAY 8 01-26-2025
+    READING DOCUMENTATION
+    https://docs.opencv.org/4.x/index.html
+    https://docs.opencv.org/4.x/db/deb/tutorial_display_image.html
+    https://chatgpt.com/c/683bdf7e-4238-8003-98a9-6d6a0b7788eb
+
+    actually i was watching the tutoroial , the THRESHOLD lesson , but suddenly a thought striked my mind to watch the actual documentation of OpenCV
+    so , i just googled it and surpried by seeing  a thing which is not included in the youtube tutorial(to be honset we cannot learn everything in a day or in a month , every thing takes tiem and we need to wati)
+    that is , the flags for imread() function , so i was eager to test them and i did
+
+    🏁 Flags for cv2.imread()
+    Flag	                 Value	         Description
+    cv2.IMREAD_COLOR	      1	        Loads the image in color. Any transparency (alpha channel) is ignored.
+    cv2.IMREAD_GRAYSCALE	  0	        Loads image in grayscale (1 channel).
+    cv2.IMREAD_UNCHANGED	 -1	        Loads image as-is (including alpha channel if present).
+    cv2.IMREAD_ANYCOLOR       4	        Loads image in any possible color format.
+    cv2.IMREAD_ANYDEPTH	      2	        Loads image with original bit depth, if possible.
+    cv2.IMREAD_REDUCED_COLOR_2 17	    Loads a 1/2-sized color version of the image.
+    cv2.IMREAD_REDUCED_COLOR_4	33	    Loads a 1/4-sized color version of the image.
+    cv2.IMREAD_REDUCED_COLOR_8	65	    Loads a 1/8-sized color version of the image.
+    cv2.IMREAD_REDUCED_GRAYSCALE_2	16	Loads a 1/2-sized grayscale version.
+    cv2.IMREAD_REDUCED_GRAYSCALE_4	32	Loads a 1/4-sized grayscale version.
+    cv2.IMREAD_REDUCED_GRAYSCALE_8	64	Loads a 1/8-sized grayscale version.
+    cv2.IMREAD_LOAD_GDAL	         8	Loads image using GDAL driver (for geospatial data). 

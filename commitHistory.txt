@@ -20,3 +20,5 @@ commit 2:
         exploring the blur func ,tried different kernel sizes , and bluring and image which is already blurred . 
     commit 2.3:
         different types of bluring , salt-pepper noise , smear effect
+commit 3:
+    read the documentation of opencv and had a glance on threshold concept 
