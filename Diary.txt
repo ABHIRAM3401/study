@@ -202,3 +202,27 @@ DAY 8 01-26-2025
     cv2.IMREAD_REDUCED_GRAYSCALE_4	32	Loads a 1/4-sized grayscale version.
     cv2.IMREAD_REDUCED_GRAYSCALE_8	64	Loads a 1/8-sized grayscale version.
     cv2.IMREAD_LOAD_GDAL	         8	Loads image using GDAL driver (for geospatial data). 
+
+
+    https://chatgpt.com/c/683e7f0b-1ec0-8003-839e-a8883fca53af
+
+
+    and also created a new folder named documentation where i will save the codes which are in documentation so that i can do some chnages in them and i can understadn those things easily 
+
+DAY 9 08-06-2025
+    updated above day
+    THRESHOLD
+    https://chatgpt.com/c/683875f3-36f8-8003-b392-092d7dde18b5
+
+    here i came to know about what is a binary image , and why we need to use thresholding 
+    and the major application like number plate text extraction and more and 
+
+    there are different flags for thresholdind and i have visualized all those but i don't the exact application of each thing 
+    
+    we have used threshold after bluring because when i apply blur to a binary image , i will no longer be a binary as we are taking avg values in blur fucntion 
+    we may get some other values otherthan maxvalue(in threshold) and 0  , because of that we have applied threshold again for the blurred image 
+
+    ret , thresh = cv2.threshold(img,80,255,cv2.THRESH_BINARY)
+    thresh_blur = cv2.medianBlur(thresh,11)
+    ret , thresh_new = cv2.threshold(thresh_blur,80,255,cv2.THRESH_BINARY)
+

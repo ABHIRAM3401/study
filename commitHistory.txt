@@ -22,3 +22,5 @@ commit 2:
         different types of bluring , salt-pepper noise , smear effect
 commit 3:
     read the documentation of opencv and had a glance on threshold concept 
+    commit 3.1:
+        created new folder for documentation files and also visulaized some of the threshold flags in cv2.threshold(img,threshold_value,maxValue,flag)

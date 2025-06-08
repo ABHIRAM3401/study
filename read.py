@@ -74,4 +74,7 @@ while True:
 video.release()
 cv2.destroyAllWindows()
 
+print(cv2.getBuildInformation())
+
+
 # ?agasabhiram
