@@ -24,3 +24,5 @@ commit 3:
     read the documentation of opencv and had a glance on threshold concept 
     commit 3.1:
         created new folder for documentation files and also visulaized some of the threshold flags in cv2.threshold(img,threshold_value,maxValue,flag)
+    commit 3.2:
+        wondered how resizing works and didn't even understand a single point about resizing and it is quite complex to learn (interpolation and resizing)

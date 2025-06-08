@@ -30,7 +30,7 @@ cv2.imshow("thresh_new",thresh_new)
 
 
 
-
+# https://chatgpt.com/c/683875f3-36f8-8003-b392-092d7dde18b5
 
 
 

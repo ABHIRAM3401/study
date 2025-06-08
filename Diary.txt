@@ -211,7 +211,7 @@ DAY 8 01-26-2025
 
 DAY 9 08-06-2025
     updated above day
-    THRESHOLD
+    THRESHOLD , RESIZE
     https://chatgpt.com/c/683875f3-36f8-8003-b392-092d7dde18b5
 
     here i came to know about what is a binary image , and why we need to use thresholding 
@@ -226,3 +226,14 @@ DAY 9 08-06-2025
     thresh_blur = cv2.medianBlur(thresh,11)
     ret , thresh_new = cv2.threshold(thresh_blur,80,255,cv2.THRESH_BINARY)
 
+    resize . https://chatgpt.com/c/68451456-aa54-8003-b48c-28f0a3321078
+    SUDDENLY i saw the word resize and i have realized how actually resize func work , i will give the parameter (dimensions) for the new image and it will expand or shrink but i will see the same image ,
+    and at this point of time i have opened chatgpt and searched how actually the resize function works and there are mainly 2 ways of resizing an image
+
+    1 . cv2.resize(image, (400, 300))
+    2 . cv2.resize(image, (0, 0), fx=2.0, fy=2.0)
+    and there are some flags also which affect the method of resizing the image but at last we get the image with required dimensions and looks similar to the original
+
+    and honestly i didn't even understand a single thing  about resizeing , interpolation and all other stuff , I NEED TO REVISE THIS CONCEPT AGAIN , SORRY I NEED TO LEARN IT FIRST SO THAT I CAN REVISE IT LATER
+
+    I KNOW I HAVE TO DO SOMEMORE WORK ON THRESHOLD , BUT I NEED TO REVISE SOME CHAPTER COZ 2MRW I HAVE MY MID EXAM , SO I WILL COME BACK ON WEDNEDAYS OR THURSDAY (12th or 13th)
