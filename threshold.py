@@ -12,6 +12,7 @@ ret , thresh_new = cv2.threshold(thresh_blur,80,255,cv2.THRESH_BINARY)
 cv2.imshow("thresh",thresh)
 cv2.imshow("thresh_blur",thresh_blur)
 cv2.imshow("thresh_new",thresh_new)
+print("the ret is ",ret)
 
 
 

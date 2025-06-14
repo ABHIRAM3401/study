@@ -237,3 +237,30 @@ DAY 9 08-06-2025
     and honestly i didn't even understand a single thing  about resizeing , interpolation and all other stuff , I NEED TO REVISE THIS CONCEPT AGAIN , SORRY I NEED TO LEARN IT FIRST SO THAT I CAN REVISE IT LATER
 
     I KNOW I HAVE TO DO SOMEMORE WORK ON THRESHOLD , BUT I NEED TO REVISE SOME CHAPTER COZ 2MRW I HAVE MY MID EXAM , SO I WILL COME BACK ON WEDNEDAYS OR THURSDAY (12th or 13th)
+
+DAY 10 14-06-2025
+    EDGE DETECTION
+    https://chatgpt.com/c/684d4bef-af64-8003-8eb8-0069d998596c
+    https://chatgpt.com/share/684d5586-2ac0-8003-81ef-ebb4cd972012
+    
+    I didn't thought that edge detection will be this simple , becuase it is just the drastic change in the pixel values , i.e. to be more particularly on the 
+    gradients which will be calculated by different formulas
+
+    suprisingly the filter/kernel which is used to detect the edge is man made i.e. it was written by humas after several trail and error methods , unlike
+    convolution layers where the weights are initialised reandomly and trained with loss + back propogation
+
+    the line which is quite intresting , i.e. is about the use of edge detection inr real life 
+    we don't want to know about the texture or any other info ... read below
+        📦 Imagine this:
+    You’re building a self-driving car. It receives camera input with millions of pixels. But it doesn’t care about the grass pattern or texture on the road — it needs to know:
+
+    Where is the road boundary?
+    Where are the pedestrians?
+    Where’s the lane marking?
+
+    Edges are often where these features start or end.
+
+    and we need to keep one thing in mind , the edge detection is done only on grayscale images because we are working with intensities here not about the rgb or bgr channesl
+    so even if we give a color image , it convrted into grayscale in background then the edge detection is performed.
+
+    READ ABOUT DILATION(dilate function) ON EROSION(erode function) which are used to make the edge thick and thin
