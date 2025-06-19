@@ -28,3 +28,5 @@ commit 3:
         wondered how resizing works and didn't even understand a single point about resizing and it is quite complex to learn (interpolation and resizing)
     commit 3.3:
         just a simple understanding of edge detection and that is not done on color images which surpried me a bit .
+    commit 3.4:
+        drawing , differece betweeen some parameters in putText , other drawing fucntions 
